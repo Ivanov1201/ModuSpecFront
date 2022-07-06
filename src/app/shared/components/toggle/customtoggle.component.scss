@@ -1,0 +1,103 @@
+
+@use '../../../theme/style/variables';
+.mat-slide-toggle {
+  .mat-slide-toggle-bar {
+    width: 48px;
+    height: 24px;
+    background-color: #00e3a91a;
+    border-radius: 12px;
+
+    &::after {
+      position: absolute;
+      left: 10px;
+      color: #00e3a9;
+      font-size: .95rem;
+      content: 'E';
+    }
+
+    .mat-slide-toggle-thumb-container {
+      top: 4px;
+      left: 28px;
+      transition: none;
+
+      .mat-slide-toggle-thumb {
+        width: 16px;
+        height: 16px;
+        background-color: #00e3a9;
+      }
+    }
+  }
+}
+
+.mat-slide-toggle.mat-checked {
+  .mat-slide-toggle-bar {
+    background-color: #00e3a91a;
+
+    &::after {
+      position: absolute;
+      left: 30px;
+      color: #00e3a9;
+      font-size: .95rem;
+      content: 'R';
+    }
+
+    .mat-slide-toggle-thumb-container {
+      top: 4px;
+      left: -11px;
+
+      .mat-slide-toggle-thumb {
+        width: 16px;
+        height: 16px;
+        background-color: #00e3a9;
+        box-shadow: 0px 0px 6px rgba(0, 226, 169, 0.5);
+      }
+    }
+  }
+}
+
+.yellow {
+  .mat-slide-toggle-bar {
+    background-color:  rgba(242, 201, 76, 0.3) !important;
+    &::after {
+      color: #f2c94c !important;
+    }
+    .mat-slide-toggle-thumb-container {
+      .mat-slide-toggle-thumb {
+        background-color: #f2c94c !important;
+        box-shadow: 0px 0px 6px rgba(179, 85, 102, 0.5);
+      }
+    }
+  }
+  .mat-slide-toggle-content {
+    color: #f2c94c !important;
+  }
+}
+
+.red {
+  .mat-slide-toggle-bar {
+    background-color:  rgba(255, 86, 131, 0.3) !important;
+    &::after {
+      color: #FFB3C5 !important;
+    }
+    .mat-slide-toggle-thumb-container {
+      .mat-slide-toggle-thumb {
+        background-color: #FFB3C5 !important;
+        box-shadow: 0px 0px 6px rgba(179, 85, 102, 0.5);
+      }
+    }
+  }
+  .mat-slide-toggle-content {
+    color: #FFB3C5 !important;
+  }
+}
+
+.green {
+  .mat-slide-toggle-content {
+    color: #00e3a9 !important;
+  }
+}
+
+
+.mat-slide-toggle.mat-disabled {
+  opacity: 1 !important;
+}

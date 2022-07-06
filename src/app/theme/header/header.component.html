@@ -1,0 +1,72 @@
+<mat-toolbar class="matero-toolbar " >
+  <div class="white-logo">
+    <img src="assets/images/moduspec/Logo-white.png" alt="">
+  </div>
+  <div class="status">
+    <span class="status-text">
+      RTM to Rig Connectivity Status:
+    </span>
+    <div class="status-icon">
+      <img src="assets/images/moduspec/Union.svg" alt="">
+      <span> Connected</span>
+    </div>
+    <span class="status-text">
+      Compliance Status:
+    </span>
+    <div class="status-icon">
+    <img src="assets/images/moduspec/Circle-check.svg" alt="">
+      <span> Compliant</span>
+    </div>
+    <span class="status-text stack-select" mat-button [matMenuTriggerFor]="stack_select_menu">
+      Stack #1 
+      <img src="assets/images/moduspec/Down-arrow.svg" alt="">
+    </span>
+    <mat-menu #stack_select_menu="matMenu" id="stack_select_menu" class="stack_select_menu">
+      <button mat-menu-item>Stack #1</button>
+      <button mat-menu-item>Stack #2</button>
+      <button mat-menu-item>Stack #3</button>
+      <button mat-menu-item>Stack #4</button>
+      <button mat-menu-item>Stack #5</button>
+    </mat-menu>
+    <mat-slide-toggle></mat-slide-toggle>
+  </div>
+  <div class="user-info" mat-button [matMenuTriggerFor]="user_info_menu" id="user_info">
+    <span>John Hoefler</span>
+    <img src="assets/images/moduspec/Down-arrow.svg" alt="">
+
+  </div>
+  <mat-menu #user_info_menu="matMenu" id="user_info_menu" class="user_info_menu">
+    <button mat-menu-item>Profile</button>
+    <button mat-menu-item>Setting</button>
+    <button mat-menu-item>Logout</button>
+  </mat-menu>
+  <!-- <button mat-icon-button class="matero-toolbar-button" *ngIf="showToggle"
+          (click)="toggleSidenav.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <app-branding *ngIf="showBranding"></app-branding>
+  <span fxFlex></span>
+
+  <app-github-button></app-github-button>
+
+  <button mat-icon-button class="matero-toolbar-button">
+    <mat-icon>search</mat-icon>
+  </button>
+
+  <button mat-icon-button class="matero-toolbar-button" fxHide.lt-sm
+          (click)="toggleFullscreen()">
+    <mat-icon>fullscreen</mat-icon>
+  </button>
+
+  <app-notification fxHide.lt-sm></app-notification>
+
+  <app-translate></app-translate>
+
+  <app-user></app-user>
+
+  <button mat-icon-button class="matero-toolbar-button" fxHide.lt-sm
+          (click)="toggleSidenavNotice.emit()">
+    <mat-icon>list</mat-icon>
+  </button> -->
+</mat-toolbar>

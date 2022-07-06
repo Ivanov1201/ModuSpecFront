@@ -1,0 +1,86 @@
+@use '@angular/material' as mat;
+
+// Layout
+$gutter: 16px !default;
+
+// Sidenav
+$sidenav-width: 240px !default;
+$sidenav-collapsed-width: 50px !default;
+$sidenav-width-mobile: 280px !default;
+
+// Toolbar
+$toolbar-height-desktop: 64px !default;
+$toolbar-height-mobile: 56px !default;
+
+// Topmenu
+$topmenu-sticky-position-desktop: $toolbar-height-desktop !default;
+$topmenu-sticky-position-mobile: $toolbar-height-mobile !default;
+
+// Typography
+$font-family-sans-serif: 'Roboto', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial,
+  'Lucida Grande', sans-serif !default;
+$font-family-monospace: 'Roboto Mono', monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+$font-family-arial: 'Arial';
+$font-size-14: .85rem;
+
+// Breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$breakpoints: (
+  xsmall: 0,
+  small:  600px,
+  medium: 960px,
+  large:  1280px,
+  xlarge: 1920px
+) !default;
+
+$dark-green: #003636;
+$light-gray: rgba(255, 255, 255, .5);
+$hover-green: #00e3a9;
+$back-green: #005353;
+$light-green: rgba(25, 84, 84, .5);
+$active-green: rgba(0, 227, 169, .1);
+$component-back-green:  rgba(0, 46, 46, .5);
+$dark-font-color: #a7c9c9;
+$pink: #ffb3c5;
+$dark-font-hover-color: #669898;
+$dark-font-color-light-purple: #92b6ff;
+$dark-font-gray: #d5d5d5;
+$dark-font-grey: rgba(255, 255, 255, .5);
+$dark-font-light-gray: rgba(255, 255, 255, .5);
+$dark-progress-background: #004955;
+$dark-font-color-dark-purple: #79a6ff;
+
+// Material colors
+$mat-colors: (
+  red: mat.$red-palette,
+  pink: mat.$pink-palette,
+  purple: mat.$purple-palette,
+  deep-purple: mat.$deep-purple-palette,
+  indigo: mat.$indigo-palette,
+  blue: mat.$blue-palette,
+  light-blue: mat.$light-blue-palette,
+  cyan: mat.$cyan-palette,
+  teal: mat.$teal-palette,
+  green: mat.$green-palette,
+  light-green: mat.$light-green-palette,
+  lime: mat.$lime-palette,
+  yellow: mat.$yellow-palette,
+  amber: mat.$amber-palette,
+  orange: mat.$orange-palette,
+  deep-orange: mat.$deep-orange-palette,
+  brown: mat.$brown-palette,
+  gray: mat.$gray-palette,
+  blue-gray: mat.$blue-gray-palette,
+  white: white,
+  black: black,
+  light: white,
+  dark: rgba(black, .87),
+  dark-green: #003636
+) !default;
+
+// The material default animation curves
+$swift-ease-out-duration: 400ms !default;
+$swift-ease-out-timing-function: cubic-bezier(.25, .8, .25, 1) !default;
