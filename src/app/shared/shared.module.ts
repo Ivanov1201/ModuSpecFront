@@ -24,6 +24,7 @@ import { CustomToggleComponent } from './components/toggle/customtoggle.componen
 import { DisableControlDirective } from './directives/disable-control.directive';
 import { SafeUrlPipe } from './pipes/safe-url.pipe';
 import { ToObservablePipe } from './pipes/to-observable.pipe';
+import { ReadbacksStatusComponent } from './components/readbacks-status/readbacks-status.component';
 
 const MODULES: any[] = [
   CommonModule,
@@ -48,6 +49,7 @@ const COMPONENTS: any[] = [
   PageHeaderComponent,
   ErrorCodeComponent,
   CustomToggleComponent,
+  ReadbacksStatusComponent
 ];
 const COMPONENTS_DYNAMIC: any[] = [];
 const DIRECTIVES: any[] = [DisableControlDirective];

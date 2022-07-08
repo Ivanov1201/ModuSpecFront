@@ -6,11 +6,15 @@ import {
   ChangeDetectionStrategy,
   ViewEncapsulation,
   NgZone,
+  ChangeDetectorRef
 } from '@angular/core';
 import { SettingsService } from '@core';
 import { Subscription } from 'rxjs';
 
 import { DashboardService } from './dashboard.srevice';
+
+import { interval } from 'rxjs';
+const source = interval(100);
 
 @Component({
   selector: 'app-dashboard',
@@ -41,21 +45,46 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
   stats = this.dashboardSrv.getStats();
 
   notifySubscription!: Subscription;
-
+  readback_status_list: any[] = [
+    {title: 'Conduit', white: 5000, green: 5000} ,
+    {title: 'Pod Supply', white: 5000, green: 5000},
+    {title: 'Pod Pilot', white: 5000, green: 5000},
+    {title: 'Manifold', white: 5000, green: 5000},
+    {title: 'Upper Annular', white: 5000, green: 5000},
+    {title: 'Lower Annular', white: 5000, green: 5000},
+    {title: 'Stack Accumulator', white: 5000, green: 5000},
+    {title: 'LMRP Connector', white: 5000, green: 5000},
+    {title: 'Wellhead Connector', white: 5000, green: 5000},
+  ];
+  
   constructor(
     private ngZone: NgZone,
     private dashboardSrv: DashboardService,
-    private settings: SettingsService
+    private settings: SettingsService,
+    private changeDetectorRef: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
     this.notifySubscription = this.settings.notify.subscribe(res => {
       console.log(res);
     });
+    this.init_readback_status();
+  }
+  init_readback_status() {
+    for (let i = 0; i < 9; i ++) {
+      this.readback_status_list[i].white = Math.floor((Math.random() + 1) * 1500);
+      this.readback_status_list[i].green = Math.floor((Math.random() + 1) * 1500);
+    }
   }
 
   ngAfterViewInit() {
     // this.ngZone.runOutsideAngular(() => this.initChart());
+    source.subscribe(val => {
+      const index = Math.floor(Math.random()*1000) % 9;
+      this.readback_status_list[index].green = Math.floor((Math.random() + 1) * 1500);
+      console.log(Math.random());
+      this.changeDetectorRef.detectChanges();
+    });
   }
 
   ngOnDestroy() {
