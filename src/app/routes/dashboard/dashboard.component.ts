@@ -15,6 +15,7 @@ import { DashboardService } from './dashboard.srevice';
 
 import { interval } from 'rxjs';
 const source = interval(100);
+const gauge_source = interval(100);
 
 @Component({
   selector: 'app-dashboard',
@@ -56,6 +57,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
     {title: 'LMRP Connector', white: 5000, green: 5000},
     {title: 'Wellhead Connector', white: 5000, green: 5000},
   ];
+  gauge: any = [3, 38, 3, 38];
   
   constructor(
     private ngZone: NgZone,
@@ -82,7 +84,19 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
     source.subscribe(val => {
       const index = Math.floor(Math.random()*1000) % 9;
       this.readback_status_list[index].green = Math.floor((Math.random() + 1) * 1500);
-      console.log(Math.random());
+      this.changeDetectorRef.detectChanges();
+    });
+
+    gauge_source.subscribe(val => {
+      const index = Math.floor(Math.random()*1000) % 2; // if index is 0, it's for LMRP Wellbore, or it's Lower Stack
+      const pressOrTemp = Math.floor(Math.random()*1000) % 2; // if pressOrTemp is 0, it's pressure or it's temperature
+
+      let value;
+      if (!pressOrTemp) {
+        this.gauge[index * 2 + pressOrTemp] += Math.floor(Math.random() * 100);
+      } else {
+        this.gauge[index * 2 + pressOrTemp] = 35 + Math.floor(5 * Math.random());
+      }
       this.changeDetectorRef.detectChanges();
     });
   }
