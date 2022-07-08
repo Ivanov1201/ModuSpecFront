@@ -94,6 +94,8 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
       let value;
       if (!pressOrTemp) {
         this.gauge[index * 2 + pressOrTemp] += Math.floor(Math.random() * 100);
+        if (this.gauge[index * 2 + pressOrTemp] > 10000) 
+          this.gauge[index * 2 + pressOrTemp] = 10000 - Math.floor(Math.random() * 100);
       } else {
         this.gauge[index * 2 + pressOrTemp] = 35 + Math.floor(5 * Math.random());
       }
