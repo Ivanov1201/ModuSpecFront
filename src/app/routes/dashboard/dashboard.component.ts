@@ -109,6 +109,13 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
       }
       this.changeDetectorRef.detectChanges();
     });
+
+    const anchor_list = document.getElementsByTagName('a');
+    for (let i = 0; i < anchor_list.length; i ++) {
+      if (anchor_list[i].href.includes('www.grapecity.com')) {
+        anchor_list[i].parentElement?.remove();
+      }
+    }
   }
 
   ngOnDestroy() {
