@@ -416,3 +416,76 @@
 .matero-container-wrap {
   width: 1920px;
 }
+
+.custom-gauge {
+  width: 60px;
+  height: 60px;
+  margin: 1em ;
+  .wj-gauge {
+    width: 100px;
+    height: 100px;
+  
+      .wj-needle {
+        fill: #F087F4 ;
+        stroke: #F087F4 ;
+  
+      }
+  }
+  
+  .wj-gauge g text {
+    display: none;
+  }
+  .wj-gauge .wj-face path {
+    fill: rgba(255, 255, 255, 0.2) !important;
+    stroke: rgb(255 255 255 / 0%) !important;
+  }
+  .wj-needle path {
+    d: path('M 0 7 L 80 0 L 0 -7 Z') !important;
+  }
+  .wj-gauge .wj-needle .wj-inner-needle-cap {
+    fill: #F087F4;
+    r: 13;
+  }
+  .wj-needle-cap {
+    display: none;
+  }
+  
+  .wj-gauge .wj-pointer, .wj-gauge .wj-needle {
+    fill: #F087F4 !important;
+  } 
+  
+  .wj-inner-needle-cap {
+    r: 13;
+  }
+
+  .purple {
+    .wj-inner-needle-cap {
+      fill: #4A81EE !important;
+    }
+    .wj-needle {
+      stroke: #4A81EE !important;}
+
+    .wj-pointer, .wj-needle {
+      fill: #4A81EE !important;
+
+    }
+  }
+
+  .pink {
+    .wj-inner-needle-cap {
+      fill: #F087F4 !important;
+    }
+    .wj-pointer, .wj-needle {
+      fill: #F087F4 !important;
+
+    }
+  
+  }
+}
+a[href^="https://www.grapecity.com/licensing/wijmo?utm_source=Wijmo-In-App&amp;utm_medium=Click-to-Site&amp;utm_campaign=Wijmo-User-Analysis"] {
+  display: none;
+} 
+a[target^=":blank"] {
+  display: none;
+} 
+
