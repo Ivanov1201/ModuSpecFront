@@ -3,6 +3,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 import { AppComponent } from './app.component';
 
 import { CoreModule } from '@core/core.module';
@@ -14,12 +15,16 @@ import { NgxPermissionsModule } from 'ngx-permissions';
 import { ToastrModule } from 'ngx-toastr';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+// import { WjInputModule } from '@grapecity/wijmo.angular2.input';
+// import { WjGaugeModule } from '@grapecity/wijmo.angular2.gauge';
 
 import { environment } from '@env/environment';
 import { BASE_URL, httpInterceptorProviders, appInitializerProviders } from '@core';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemDataService } from '@shared/in-mem/in-mem-data.service';
+
+
 
 // Required for AOT compilation
 export function TranslateHttpLoaderFactory(http: HttpClient) {
@@ -35,6 +40,8 @@ export function TranslateHttpLoaderFactory(http: HttpClient) {
     CoreModule,
     ThemeModule,
     RoutesModule,
+    // WjGaugeModule, 
+    // WjInputModule,
     SharedModule,
     FormlyConfigModule.forRoot(),
     NgxPermissionsModule.forRoot(),

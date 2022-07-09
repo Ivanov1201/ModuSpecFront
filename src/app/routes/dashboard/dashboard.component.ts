@@ -8,12 +8,15 @@ import {
   NgZone,
   ChangeDetectorRef
 } from '@angular/core';
+import '@grapecity/wijmo.styles/wijmo.css';
 import { SettingsService } from '@core';
 import { Subscription } from 'rxjs';
 
 import { DashboardService } from './dashboard.srevice';
 
 import { interval } from 'rxjs';
+import { RadialGauge } from '@grapecity/wijmo.gauge';
+import { WjGaugeModule } from '@grapecity/wijmo.angular2.gauge';
 const source = interval(100);
 const gauge_source = interval(100);
 
@@ -66,11 +69,16 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
     private changeDetectorRef: ChangeDetectorRef
   ) {}
 
+  //gauge
+
   ngOnInit() {
     this.notifySubscription = this.settings.notify.subscribe(res => {
       console.log(res);
     });
     this.init_readback_status();
+    console.log('lll');
+    //gauge 
+   
   }
   init_readback_status() {
     for (let i = 0; i < 9; i ++) {
@@ -85,7 +93,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
       const index = Math.floor(Math.random()*1000) % 9;
       this.readback_status_list[index].green = Math.floor((Math.random() + 1) * 1500);
       this.changeDetectorRef.detectChanges();
-    });
+    }); 
 
     gauge_source.subscribe(val => {
       const index = Math.floor(Math.random()*1000) % 2; // if index is 0, it's for LMRP Wellbore, or it's Lower Stack
@@ -101,6 +109,13 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
       }
       this.changeDetectorRef.detectChanges();
     });
+
+    const anchor_list = document.getElementsByTagName('a');
+    for (let i = 0; i < anchor_list.length; i ++) {
+      if (anchor_list[i].href.includes('www.grapecity.com')) {
+        anchor_list[i].parentElement?.remove();
+      }
+    }
   }
 
   ngOnDestroy() {

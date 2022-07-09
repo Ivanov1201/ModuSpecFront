@@ -5,6 +5,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { DragDropModule } from '@angular/cdk/drag-drop';
 
+
 import { MaterialModule } from '../material.module';
 import { MaterialExtensionsModule } from '../material-extensions.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -21,6 +22,9 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 import { ErrorCodeComponent } from './components/error-code/error-code.component';
 import { CustomToggleComponent } from './components/toggle/customtoggle.component';
+import { WjGaugeModule } from '@grapecity/wijmo.angular2.gauge';
+import { GuageComponent } from './components/guage/guage.component';
+import { WjInputModule } from '@grapecity/wijmo.angular2.input';
 import { DisableControlDirective } from './directives/disable-control.directive';
 import { SafeUrlPipe } from './pipes/safe-url.pipe';
 import { ToObservablePipe } from './pipes/to-observable.pipe';
@@ -41,6 +45,8 @@ const MODULES: any[] = [
   NgProgressRouterModule,
   NgProgressHttpModule,
   NgxPermissionsModule,
+  WjGaugeModule,
+  WjInputModule,
   ToastrModule,
   TranslateModule,
 ];
@@ -49,6 +55,7 @@ const COMPONENTS: any[] = [
   PageHeaderComponent,
   ErrorCodeComponent,
   CustomToggleComponent,
+  GuageComponent,
   ReadbacksStatusComponent
 ];
 const COMPONENTS_DYNAMIC: any[] = [];

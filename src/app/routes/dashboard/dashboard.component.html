@@ -312,14 +312,35 @@
                 <div class="bid-modal" fxFlex="32" fxFlex.gt-sm="32" fxFlex.gt-md="32">
                     <div class="pressure">
                         <div class="matero-col  progress-bar" fxFlex="50" fxFlex.gt-sm="50" fxFlex.gt-md="50">
-                            <img src="assets/images/moduspec/Ellipse.png" alt="">
+                            <!-- <img src="assets/images/moduspec/Ellipse.png" alt=""> -->
+                            <!-- <wj-radial-gauge
+                                [min]="0"
+                                [max]="500"
+                                [value]="100"
+                                [showText]="(needleShape == 'Outer' || needleShape == 'None') ? 'Value' : 'None'"
+                                [startAngle]="startAngle"
+                                [sweepAngle]="sweepAngle"
+                                [tickSpacing]="tickSpacing"
+                                [needleShape]="needleShape"
+                                [needleLength]="needleLength"
+                                [thickness]=".2"
+                                [showTicks]="true"
+                                [showTickText]="true"
+                                [isReadOnly]="false">
+                            </wj-radial-gauge> -->
+                            <customguage [color]="'purple'" [max]="20000" [value]="gauge[0]"></customguage>
+                                <!-- <ng-progress></ng-progress> -->
+                            <!-- <div id="preview">
+                                <canvas width=70 height=70 id="canvas-preview"></canvas>
+                                <div id="preview-textfield"></div>
+                            </div> -->
                             <div>
                                 <p>{{gauge[0]}} psi</p>
                                 <span>LMRP Wellbore Pressure</span>
                             </div>
                         </div>
                         <div class="matero-col  progress-bar" fxFlex="50" fxFlex.gt-sm="50" fxFlex.gt-md="50">
-                            <img src="assets/images/moduspec/Ellipse.png" alt="">
+                            <customguage [color]="'purple'" [max]="70" [value]="gauge[1]"></customguage>
                             <div>
                                 <p>{{gauge[1]}}°F</p>
                                 <span>LMRP Wellbore Temp</span>
@@ -328,14 +349,14 @@
                     </div>
                     <div class="pressure">
                         <div class="matero-col  progress-bar red" fxFlex="50" fxFlex.gt-sm="50" fxFlex.gt-md="50">
-                            <img src="assets/images/moduspec/Ellipse-pink.png" alt="">
+                            <customguage [color]="'pink'" [max]="20000" [value]="gauge[2]"></customguage>
                             <div>
                                 <p>{{gauge[2]}} psi</p>
                                 <span>Lower Stack Wellbore Press.</span>
                             </div>
                         </div>
                         <div class="matero-col  progress-bar red" fxFlex="50" fxFlex.gt-sm="50" fxFlex.gt-md="50">
-                            <img src="assets/images/moduspec/Ellipse-pink.png" alt="">
+                            <customguage [color]="'pink'" [max]="70" [value]="gauge[3]"></customguage>
                             <div>
                                 <p>{{gauge[3]}}°F</p>
                                 <span>Lower Stack Wellbore Temp.</span>
