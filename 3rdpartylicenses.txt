@@ -94,6 +94,27 @@ MIT
 @angular/router
 MIT
 
+@grapecity/wijmo
+Commercial
+
+@grapecity/wijmo.angular2.directivebase
+Commercial
+
+@grapecity/wijmo.angular2.gauge
+Commercial
+
+@grapecity/wijmo.angular2.input
+Commercial
+
+@grapecity/wijmo.gauge
+Commercial
+
+@grapecity/wijmo.input
+Commercial
+
+@grapecity/wijmo.styles
+Commercial
+
 @ng-matero/extensions
 MIT
 
