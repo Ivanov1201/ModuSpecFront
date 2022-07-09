@@ -1,9 +1,19 @@
-#install
+### Install project
+
+```
 npm install
-#run
+```
+
+### Run project
+
+```
 npm run start
-#build
+```
+
+### Deploy project to the github 
+
+```
 npm run build
-#deploy to the github
-npm run build
+
 ngh --dir=dist/ng-matero --no-silent
+```
