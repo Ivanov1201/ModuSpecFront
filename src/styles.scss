@@ -7,8 +7,9 @@
 @use 'styles/plugins';
 
 a[href^="https://www.grapecity.com/licensing/wijmo?utm_source=Wijmo-In-App&amp;utm_medium=Click-to-Site&amp;utm_campaign=Wijmo-User-Analysis"] {
-    display: none;
-  } 
-a[target^=":blank"] {
-    display: none;
-  } 
+  display: none;
+}
+
+a[target^=':blank'] {
+  display: none;
+}
