@@ -23,6 +23,8 @@ import { BASE_URL, httpInterceptorProviders, appInitializerProviders } from '@co
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemDataService } from '@shared/in-mem/in-mem-data.service';
+import * as wjcCore from '@grapecity/wijmo';
+wjcCore.setLicenseKey('your license key goes here...');
 
 
 
