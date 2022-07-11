@@ -23,7 +23,8 @@ import { PageHeaderComponent } from './components/page-header/page-header.compon
 import { ErrorCodeComponent } from './components/error-code/error-code.component';
 import { CustomToggleComponent } from './components/toggle/customtoggle.component';
 import { WjGaugeModule } from '@grapecity/wijmo.angular2.gauge';
-import { GuageComponent } from './components/guage/guage.component';
+import { GuageComponent } from './components/gauge/gauge.component';
+import { SmartguageComponent } from './components/smartguage/smartguage.component';
 import { WjInputModule } from '@grapecity/wijmo.angular2.input';
 import { DisableControlDirective } from './directives/disable-control.directive';
 import { SafeUrlPipe } from './pipes/safe-url.pipe';
@@ -56,6 +57,7 @@ const COMPONENTS: any[] = [
   ErrorCodeComponent,
   CustomToggleComponent,
   GuageComponent,
+  SmartguageComponent,
   ReadbacksStatusComponent
 ];
 const COMPONENTS_DYNAMIC: any[] = [];

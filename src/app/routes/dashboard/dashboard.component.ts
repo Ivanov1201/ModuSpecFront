@@ -42,6 +42,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
 
   messages = this.dashboardSrv.getMessages();
 
+
   charts = this.dashboardSrv.getCharts();
   chart1: any;
   chart2: any;
@@ -69,7 +70,14 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
     private changeDetectorRef: ChangeDetectorRef
   ) {}
 
-  //gauge
+  //gauge params
+  params = [
+    {min: 0, max: 100000, value: this.gauge[0]},
+    {min: 0, max: 50, value: this.gauge[1]},
+    {min: 0, max: 100000, value: this.gauge[2]},
+    {min: 0, max: 50, value: this.gauge[3]},
+  ];
+
 
   ngOnInit() {
     this.notifySubscription = this.settings.notify.subscribe(res => {
@@ -78,6 +86,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
     this.init_readback_status();
     console.log('lll');
     //gauge 
+
    
   }
   init_readback_status() {
