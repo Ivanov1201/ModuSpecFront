@@ -337,13 +337,22 @@
                                 <span>Lower Stack Wellbore Press.</span>
                             </div>
                         </div>
+                        <div class="matero-col  progress-bar" fxFlex="50" fxFlex.gt-sm="50" fxFlex.gt-md="50">
+                            <!-- <customgauge [color]="'purple'" [max]="50" [value]="gauge[3]"></customgauge> -->
+                            <app-smartguage [params]="{min: 0, max: 50, value: gauge[3], color: '#f087f4', bgcolor: 'rgba(255, 255, 255, .2)'}"></app-smartguage>
+                            <div>
+                                <p>{{gauge[3]}}°F</p>
+                                <span>Lower Stack Wellbre Temp</span>
                             </div>
+                        </div>
+                    </div>
+                    <div class="parent-component">
                         <img src="assets/images/moduspec/Model.png" alt="">
                     </div>
                 </div>
             </div>
         </mat-tab>
         <mat-tab label="RTM">RTM</mat-tab>
-  <mat-tab label="FAILURE PROPAGATION">FAILURE PROPAGATION</mat-tab>
-</mat-tab-group>
+        <mat-tab label="FAILURE PROPAGATION">FAILURE PROPAGATION</mat-tab>
+    </mat-tab-group>
 </div>
