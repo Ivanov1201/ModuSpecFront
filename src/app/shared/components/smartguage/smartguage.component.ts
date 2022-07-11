@@ -17,7 +17,7 @@ export class SmartguageComponent implements DoCheck {
   constructor() { }
 
   ngDoCheck(): void {
-    let value = Math.floor(260 * (this.params.value / (this.params.max - this.params.min) - 0.5));
+    const value = Math.floor(260 * (this.params.value / (this.params.max - this.params.min) - 0.5));
     this.pointer = 'rotate(' + value + 'deg)';
     this.circle = 126 - 87 * (this.params.value / (this.params.max - this.params.min));
 
