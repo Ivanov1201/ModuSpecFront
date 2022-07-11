@@ -13,7 +13,7 @@ npm run start
 ### Deploy project to the github 
 
 ```
-npm run build --prod --base-href "https://ivanov1201.github.io/ModuSpecFront/"
+ng build --base-href "https://ivanov1201.github.io/ModuSpecFront/"
 
 ngh --dir=dist/ng-matero --no-silent
 ```
