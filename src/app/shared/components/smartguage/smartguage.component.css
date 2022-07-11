@@ -1,0 +1,22 @@
+.circle-front {
+    stroke-dasharray: 126;
+    stroke: rgb(74, 129, 238);
+    stroke-width: 2.2px;
+    stroke-linecap: round;
+    transform: translate(2px, 5px) rotate(138deg);
+    transform-origin: center;
+}
+
+.circle-backend {
+    stroke-dasharray: 126;
+    stroke-dashoffset: 39;
+    stroke: rgba(255, 255, 255, 0.2);
+    transform: translate(2px, 5px) rotate(138deg);
+    stroke-width: 2;
+    transform-origin: center;    
+    stroke-linecap: round;
+}
+
+.pointer {
+    transform-origin: 29.7727px 31.2728px;
+}

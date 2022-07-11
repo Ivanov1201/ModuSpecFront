@@ -312,35 +312,16 @@
                 <div class="bid-modal" fxFlex="32" fxFlex.gt-sm="32" fxFlex.gt-md="32">
                     <div class="pressure">
                         <div class="matero-col  progress-bar" fxFlex="50" fxFlex.gt-sm="50" fxFlex.gt-md="50">
-                            <!-- <img src="assets/images/moduspec/Ellipse.png" alt=""> -->
-                            <!-- <wj-radial-gauge
-                                [min]="0"
-                                [max]="500"
-                                [value]="100"
-                                [showText]="(needleShape == 'Outer' || needleShape == 'None') ? 'Value' : 'None'"
-                                [startAngle]="startAngle"
-                                [sweepAngle]="sweepAngle"
-                                [tickSpacing]="tickSpacing"
-                                [needleShape]="needleShape"
-                                [needleLength]="needleLength"
-                                [thickness]=".2"
-                                [showTicks]="true"
-                                [showTickText]="true"
-                                [isReadOnly]="false">
-                            </wj-radial-gauge> -->
-                            <customguage [color]="'purple'" [max]="100000" [value]="gauge[0]"></customguage>
-                                <!-- <ng-progress></ng-progress> -->
-                            <!-- <div id="preview">
-                                <canvas width=70 height=70 id="canvas-preview"></canvas>
-                                <div id="preview-textfield"></div>
-                            </div> -->
+                            <!-- <customgauge [color]="'purple'" [max]="100000" [value]="gauge[0]"></customgauge> -->
+                            <app-smartguage [params]="{min: 0, max: 100000, value: gauge[0], color: '#4a81ee', bgcolor: 'rgba(255, 255, 255, .2)'}"></app-smartguage>
                             <div>
                                 <p>{{gauge[0]}} psi</p>
                                 <span>LMRP Wellbore Pressure</span>
                             </div>
                         </div>
                         <div class="matero-col  progress-bar" fxFlex="50" fxFlex.gt-sm="50" fxFlex.gt-md="50">
-                            <customguage [color]="'purple'" [max]="50" [value]="gauge[1]"></customguage>
+                            <!-- <customgauge [color]="'purple'" [max]="50" [value]="gauge[1]"></customgauge> -->
+                            <app-smartguage [params]="{min: 0, max: 50, value: gauge[1], color: '#4a81ee', bgcolor: 'rgba(255, 255, 255, .2)'}"></app-smartguage>
                             <div>
                                 <p>{{gauge[1]}}°F</p>
                                 <span>LMRP Wellbore Temp</span>
@@ -349,14 +330,16 @@
                     </div>
                     <div class="pressure">
                         <div class="matero-col  progress-bar red" fxFlex="50" fxFlex.gt-sm="50" fxFlex.gt-md="50">
-                            <customguage [color]="'pink'" [max]="100000" [value]="gauge[2]"></customguage>
+                            <!-- <customgauge [color]="'pink'" [max]="100000" [value]="gauge[2]"></customgauge> -->
+                            <app-smartguage [params]="{min: 0, max: 100000, value: gauge[2], color: '#f087f4', bgcolor: 'rgba(255, 255, 255, .2)'}"></app-smartguage>
                             <div>
                                 <p>{{gauge[2]}} psi</p>
                                 <span>Lower Stack Wellbore Press.</span>
                             </div>
                         </div>
                         <div class="matero-col  progress-bar red" fxFlex="50" fxFlex.gt-sm="50" fxFlex.gt-md="50">
-                            <customguage [color]="'pink'" [max]="50" [value]="gauge[3]"></customguage>
+                            <!-- <customgauge [color]="'pink'" [max]="50" [value]="gauge[3]"></customgauge> -->
+                            <app-smartguage [params]="{min: 0, max: 50, value: gauge[3], color: '#f087f4', bgcolor: 'rgba(255, 255, 255, .2)'}"></app-smartguage>
                             <div>
                                 <p>{{gauge[3]}}°F</p>
                                 <span>Lower Stack Wellbore Temp.</span>
@@ -369,7 +352,7 @@
                 </div>
             </div>
         </mat-tab>
-        <mat-tab label="SRM">RTM</mat-tab>
+        <mat-tab label="RTM">RTM</mat-tab>
   <mat-tab label="FAILURE PROPAGATION">FAILURE PROPAGATION</mat-tab>
 </mat-tab-group>
 </div>

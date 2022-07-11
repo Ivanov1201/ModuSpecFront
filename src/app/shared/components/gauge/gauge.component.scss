@@ -1,0 +1,67 @@
+.custom-gauge {
+    width: 60px;
+    height: 60px;
+    margin: 1em; }
+  
+    .wj-gauge {
+      width: 100px;
+      height: 100px;
+  
+    }
+    .wj-needle {
+      fill: #f087f4;
+      stroke: #f087f4;
+    }
+  
+    .wj-gauge g text {
+      display: none;
+    }
+  
+    .wj-gauge .wj-face path {
+      fill: rgba(255, 255, 255, .2) !important;
+      stroke: rgb(255 255 255 / 0%) !important;
+    }
+  
+    .wj-needle path {
+      d: path('M 0 7 L 80 0 L 0 -7 Z') !important;
+    }
+  
+    .wj-gauge .wj-needle .wj-inner-needle-cap {
+      fill: #f087f4;
+      r: 13;
+    }
+  
+    .wj-needle-cap {
+      display: none;
+    }
+  
+    .wj-gauge .wj-pointer,
+    .wj-gauge .wj-needle {
+      fill: #f087f4 !important;
+    }
+  
+    .wj-inner-needle-cap {
+      r: 13;
+    }
+  
+      .purple .wj-inner-needle-cap {
+        fill: #4a81ee !important;
+      }
+  
+      .purple .wj-needle {
+        stroke: #4a81ee !important;
+      }
+  
+      .purple .wj-pointer,
+      .purple .wj-needle {
+        fill: #4a81ee !important;
+      }
+  
+    .pink .wj-inner-needle-cap {
+        fill: #f087f4 !important;
+      }
+    
+    .pink .wj-pointer,
+    .pink .wj-needle {
+      fill: #f087f4 !important;
+    }
